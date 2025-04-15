@@ -1,0 +1,29 @@
+    
+public static void nthfib(int k){
+    int first=0,second=1,next=0,count=2;
+    if(k==0){
+        System.out.print(0);
+        return;
+    }
+    if(k==1){
+        System.out.print(1);
+        return;
+    }
+    while(count<=k){
+        if(count==k){
+            System.out.print(next);
+            break;
+        }
+        next=first+second;
+        first=second;
+        second=next;
+        count++;
+    }
+    return;
+}
+
+
+
+Scanner scan=new Scanner(System.in);
+        int k=scan.nextInt();
+        nthfib(k);
